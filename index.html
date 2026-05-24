@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Darel Galvin - UI/UX Designer & Front-End Developer Portfolio. Crafting intuitive digital experiences through design thinking and clean code. Jakarta, Indonesia.">
+    <meta name="keywords" content="UI/UX Designer, Front-End Developer, Portfolio, Web Design, Jakarta, Indonesia, Darel Galvin">
+    <meta name="author" content="Darel Galvin">
+    <title>Darel Galvin | Tech Enthusiast & Technology Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Grid overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="navLogo">
+                <span class="logo-bracket">&lt;</span>DG<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link nav-link-cta">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-shell">
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-in">
+                Darel <span class="hero-line-accent">Galvin</span>
+            </h1>
+            <div class="hero-roles animate-in">
+                <span class="role-static">I'm a </span>
+                <span class="role-typewriter" id="roleTypewriter"></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+            <p class="hero-description animate-in">
+                Crafting intuitive digital experiences through the intersection of
+                <span class="text-gradient">design thinking</span> and
+                <span class="text-gradient">clean code</span>.
+            </p>
+            <div class="hero-actions animate-in">
+                <a href="#projects" class="btn btn-primary" id="heroViewProjects">
+                    <span>View Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary" id="heroGetInTouch">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Awards</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">3.79</span>
+                    <span class="stat-label">GPA</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-in" aria-hidden="true">
+            <div class="laptop-visual">
+                <div class="laptop-screen">
+                    <div class="screen-toolbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="screen-content">
+                        <div class="code-panel">
+                            <span class="code-line code-line-sm"></span>
+                            <span class="code-line"></span>
+                            <span class="code-line code-line-accent"></span>
+                            <span class="code-line code-line-md"></span>
+                        </div>
+                        <div class="design-panel">
+                            <span class="design-card"></span>
+                            <span class="design-row"></span>
+                            <span class="design-row design-row-short"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="laptop-base">
+                    <span class="trackpad"></span>
+                </div>
+            </div>
+            <div class="orbit-system" hidden>
+                <div class="orbit-center">
+                    <span class="orbit-icon">✦</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 — About</span>
+                <h2 class="section-title">Designing the <span class="text-gradient">Future</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-description">
+                        Passionate Information Science undergraduate at <strong>UPN "Veteran" Jakarta</strong>
+                        with strong interests in UI/UX Design, Front-End Development, and Human Computer Interaction (HCI).
+                    </p>
+                    <p class="about-description">
+                        Experienced in designing user-centered digital products, conducting user research,
+                        and developing responsive web interfaces. I believe in creating digital experiences that are
+                        not only beautiful but also accessible and meaningful.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Jakarta, Indonesia</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+6285214015700</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>darelgal132@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <div class="edu-card glass-card">
+                        <div class="edu-icon">🎓</div>
+                        <div class="edu-content">
+                            <h3>UPN "Veteran" Jakarta</h3>
+                            <p>Undergraduate in Information Science</p>
+                            <div class="edu-meta">
+                                <span class="edu-badge">GPA 3.79/4.0</span>
+                                <span class="edu-year">2024 — Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card glass-card">
+                        <div class="edu-icon">📋</div>
+                        <div class="edu-content">
+                            <h3>Project & Product Management</h3>
+                            <p>Bootcamp — Myskill.id</p>
+                            <div class="edu-meta">
+                                <span class="edu-badge">Certificate</span>
+                                <span class="edu-year">Dec 2025 — Jan 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 — Experience</span>
+                <h2 class="section-title">Where I've <span class="text-gradient">Worked</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>System Analyst Intern</h3>
+                                <p class="timeline-company">PT Sinergi Insan Andalan</p>
+                            </div>
+                            <span class="timeline-date">Mar 2026 — Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Conducted basic usability improvements by refining user interaction</li>
+                            <li>Created system documentation such as flowcharts, user flows, and requirement specifications</li>
+                            <li>Analyzed user requirements and translated them into system workflows and application features.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Usability</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>IT UX Researcher Intern</h3>
+                                <p class="timeline-company">Digital Amoeba — PT Telkom Indonesia (Persero) Tbk</p>
+                            </div>
+                            <span class="timeline-date">Mar 2025 — Aug 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Analyzed business data to identify trends and support data-driven decision making</li>
+                            <li>Generated insights from data to improve business performance and operational efficiency</li>
+                            <li>Collaborated with cross-functional teams to understand data requirements and deliver actionable insights</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">User Research</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Cross-functional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 — Projects</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Work</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card" id="project-betawi">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #0a1628, #1a3a5c);">
+                            <span class="project-emoji">🏛️</span>
+                            <div class="project-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-accent">Front-End</span>
+                            <span class="tag">Responsive Design</span>
+                        </div>
+                        <h3>Betawi Museum</h3>
+                        <p>Built a responsive and visually engaging museum website interface to improve user accessibility and digital experience for exploring Betawi cultural heritage.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card" id="project-skillbridge">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #1a0a38, #6c5ce7);">
+                            <span class="project-emoji">♿</span>
+                            <div class="project-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-accent">UI/UX Design</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                        <h3>SkillBridge</h3>
+                        <p>Designed an accessible course application focused on improving learning experiences for visually impaired and hearing-impaired users with user-centered solutions.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>User Research</span>
+                            <span>Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card" id="project-ecogreen">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #0a2818, #00b894);">
+                            <span class="project-emoji">🌱</span>
+                            <div class="project-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-accent">Front-End & UX</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                        <h3>EcoGreen</h3>
+                        <p>Designed and developed an eco-scoring application interface for UMKM to help users measure and understand their environmental impact through an intuitive platform.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS/JS</span>
+                            <span>Figma</span>
+                            <span>UI Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 — Achievements</span>
+                <h2 class="section-title">Awards & <span class="text-gradient">Recognition</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card glass-card" id="achievement-astratech">
+                    <div class="achievement-rank">
+                        <span class="rank-number">2<sup>nd</sup></span>
+                        <span class="rank-label">Place</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>ASTRATECH 2025 UI/UX Design</h3>
+                        <p class="achievement-org">National Competition — Astra Polytechnique</p>
+                        <p class="achievement-desc">Developed "SkillBridge," an inclusive course application for accessible learning experiences for visually and hearing-impaired users.</p>
+                    </div>
+                    <div class="achievement-badge">🏆</div>
+                </div>
+                <div class="achievement-card glass-card" id="achievement-hackathon">
+                    <div class="achievement-rank">
+                        <span class="rank-number">2<sup>nd</sup></span>
+                        <span class="rank-label">Place</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>National IT Hackathon</h3>
+                        <p class="achievement-org">National Competition — Harkat Bangsa University</p>
+                        <p class="achievement-desc">Developed "EcoGreen," a digital platform helping UMKM measure environmental sustainability through an eco-scoring system.</p>
+                    </div>
+                    <div class="achievement-badge">🏆</div>
+                </div>
+                <div class="achievement-card glass-card" id="achievement-technoday">
+                    <div class="achievement-rank">
+                        <span class="rank-number">🏅</span>
+                        <span class="rank-label">Finalist</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Technoday IT Competition</h3>
+                        <p class="achievement-org">National Competition — University of Semarang</p>
+                        <p class="achievement-desc">Developed "SkillBridge," an inclusive course application designed to support accessible learning experiences.</p>
+                    </div>
+                    <div class="achievement-badge">🎖️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section" id="leadership">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05 — Leadership</span>
+                <h2 class="section-title">Growth & <span class="text-gradient">Leadership</span></h2>
+            </div>
+            <div class="leadership-grid">
+                <div class="leadership-card glass-card" id="leadership-paragon">
+                    <div class="leadership-icon">🚀</div>
+                    <h3>Novo Club by PARAGON CORP</h3>
+                    <p>Structured talent development program focused on leadership, career readiness, and problem-solving skills. Collaborating in group discussions and case-based projects.</p>
+                </div>
+                <div class="leadership-card glass-card" id="leadership-sxcelerate">
+                    <div class="leadership-icon">💡</div>
+                    <h3>SxCelerate StudentsxCEOs Jakarta</h3>
+                    <p class="leadership-subtitle">Entrepreneur Path</p>
+                    <p>Business and career-focused discussions with industry professionals. Developing insights on entrepreneurship, leadership, and collaborative knowledge-sharing.</p>
+                </div>
+                <div class="leadership-card glass-card" id="leadership-rd">
+                    <div class="leadership-icon">🔬</div>
+                    <h3>R&D Staff — Islamic Youth Organization</h3>
+                    <p class="leadership-subtitle">Sukabumi</p>
+                    <p>Collected and analyzed data to support student research, created reports using Excel/Google Sheets, and presented findings in internal forums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">06 — Skills</span>
+                <h2 class="section-title">Tools & <span class="text-gradient">Expertise</span></h2>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">🎨</span>
+                        Design
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Wireframing</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Prototyping</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">User Research</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Usability Testing</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Design System</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">⚡</span>
+                        Development
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">HTML</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">CSS</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item glass-card">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">🧠</span>
+                        Soft Skills
+                    </h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill glass-card">
+                            <span class="soft-skill-icon">💡</span>
+                            <span>Creative Thinking</span>
+                        </div>
+                        <div class="soft-skill glass-card">
+                            <span class="soft-skill-icon">👥</span>
+                            <span>Leadership</span>
+                        </div>
+                        <div class="soft-skill glass-card">
+                            <span class="soft-skill-icon">📊</span>
+                            <span>Analytical Thinking</span>
+                        </div>
+                        <div class="soft-skill glass-card">
+                            <span class="soft-skill-icon">🤝</span>
+                            <span>Team Work</span>
+                        </div>
+                        <div class="soft-skill glass-card">
+                            <span class="soft-skill-icon">🧩</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">🛠️</span>
+                        Software & Tools
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-item glass-card">Figma</div>
+                        <div class="tool-item glass-card">Miro</div>
+                        <div class="tool-item glass-card">VS Code</div>
+                        <div class="tool-item glass-card">Git/GitHub</div>
+                        <div class="tool-item glass-card">MySQL</div>
+                        <div class="tool-item glass-card">Canva</div>
+                        <div class="tool-item glass-card">CapCut</div>
+                        <div class="tool-item glass-card">MS Word</div>
+                        <div class="tool-item glass-card">MS Excel</div>
+                        <div class="tool-item glass-card">Google Sheets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">07 — Contact</span>
+                <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-cards">
+                    <a href="mailto:darelgal132@gmail.com" class="contact-card glass-card" id="contact-email">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">darelgal132@gmail.com</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                    <a href="tel:+6285214015700" class="contact-card glass-card" id="contact-phone">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+62 852 1401 5700</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                    <div class="contact-card glass-card" id="contact-location">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Jakarta, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form glass-card" action="https://formsubmit.co/darelgal132@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New portfolio message from Darel Galvin">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey">
+                    <div class="form-row">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="subject" placeholder="Project collaboration" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="ctaSendEmail">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>DG<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by Darel Galvin</p>
+                <div class="footer-languages">
+                    <span>🇮🇩 Indonesian (Native)</span>
+                    <span class="footer-divider">•</span>
+                    <span>🇬🇧 English (Fluent)</span>
+                </div>
+                <p class="footer-copyright">© 2025 Darel Galvin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
